@@ -5,7 +5,7 @@
 //  Created by Eung Jin Lee on 4/16/13.
 //
 //
-
+#pragma once
 #import "GB2Sprite.h"
 #import "cocos2d.h"
 

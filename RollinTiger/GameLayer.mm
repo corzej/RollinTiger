@@ -14,6 +14,7 @@
 #import "Object.h"
 #import "GMath.h"
 #import "SimpleAudioEngine.h"
+#import "Prince.h"
 
 // HelloWorldLayer implementation
 @implementation GameLayer
@@ -73,14 +74,22 @@
         
         // add walls to the right
         GB2Node *rightWall = [[GB2Node alloc] initWithStaticBody:nil node:nil];
-        [rightWall addEdgeFrom:b2Vec2FromCC(480, 0) to:b2Vec2FromCC(480, 10000)];
+        [rightWall addEdgeFrom:b2Vec2FromCC(320, 0) to:b2Vec2FromCC(320, 10000)];
         
         nextDrop = 3.0f;  // drop first object after 3s
-        dropDelay = 2.0f; // drop next object after 1s
+        dropDelay = 1.0f; // drop next object after 1s
         
         [SimpleAudioEngine sharedEngine];
         
         [self scheduleUpdate];
+        
+        //add prince
+        prince = [[[Prince alloc] initWithGameLayer:self] autorelease];
+        [objectLayer addChild:[prince ccNode] z:10000];
+        [prince setPhysicsPosition:b2Vec2FromCC(240,150)];
+        
+        //enabling movement
+        self.isAccelerometerEnabled = YES;
     }
     
 	return self;
@@ -113,8 +122,8 @@
         [nextObject setActive:NO];
         
         // set position
-        float xPos = gFloatRand(40,440);
-        float yPos = 400;
+        float xPos = gFloatRand(40,300);
+        float yPos = 500;
         [nextObject setPhysicsPosition:b2Vec2FromCC(xPos, yPos)];
         
         // add it to our object layer
@@ -122,5 +131,11 @@
     }
 }
 
+- (void)accelerometer:(UIAccelerometer*)accelerometer
+        didAccelerate:(UIAcceleration*)acceleration
+{
+    // forward accelerometer value to monkey
+    [prince walk:acceleration.x];
+}
 
 @end

@@ -200,6 +200,7 @@
 		2971EE4B171DA78300F33AC8 /* Floor.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2971EE4A171DA78300F33AC8 /* Floor.mm */; };
 		2971EE4F171DA88000F33AC8 /* GameLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2971EE4E171DA88000F33AC8 /* GameLayer.mm */; };
 		2971EE52171DAE2100F33AC8 /* Object.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2971EE51171DAE2100F33AC8 /* Object.mm */; };
+		2971EE55171DCF6C00F33AC8 /* Prince.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2971EE54171DCF6C00F33AC8 /* Prince.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -595,6 +596,8 @@
 		2971EE4E171DA88000F33AC8 /* GameLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameLayer.mm; sourceTree = "<group>"; };
 		2971EE50171DAE2100F33AC8 /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
 		2971EE51171DAE2100F33AC8 /* Object.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Object.mm; sourceTree = "<group>"; };
+		2971EE53171DCF6C00F33AC8 /* Prince.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prince.h; sourceTree = "<group>"; };
+		2971EE54171DCF6C00F33AC8 /* Prince.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Prince.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1243,6 +1246,8 @@
 				2971EE4E171DA88000F33AC8 /* GameLayer.mm */,
 				2971EE50171DAE2100F33AC8 /* Object.h */,
 				2971EE51171DAE2100F33AC8 /* Object.mm */,
+				2971EE53171DCF6C00F33AC8 /* Prince.h */,
+				2971EE54171DCF6C00F33AC8 /* Prince.mm */,
 			);
 			name = gameFiles;
 			sourceTree = "<group>";
@@ -1491,6 +1496,7 @@
 				2971EE4B171DA78300F33AC8 /* Floor.mm in Sources */,
 				2971EE4F171DA88000F33AC8 /* GameLayer.mm in Sources */,
 				2971EE52171DAE2100F33AC8 /* Object.mm in Sources */,
+				2971EE55171DCF6C00F33AC8 /* Prince.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
