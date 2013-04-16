@@ -197,6 +197,9 @@
 		2971EE43171DA55200F33AC8 /* objects.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2971EE3A171DA55200F33AC8 /* objects.plist */; };
 		2971EE44171DA55200F33AC8 /* objects.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 2971EE3B171DA55200F33AC8 /* objects.pvr.ccz */; };
 		2971EE45171DA55200F33AC8 /* shapes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2971EE3C171DA55200F33AC8 /* shapes.plist */; };
+		2971EE4B171DA78300F33AC8 /* Floor.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2971EE4A171DA78300F33AC8 /* Floor.mm */; };
+		2971EE4F171DA88000F33AC8 /* GameLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2971EE4E171DA88000F33AC8 /* GameLayer.mm */; };
+		2971EE52171DAE2100F33AC8 /* Object.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2971EE51171DAE2100F33AC8 /* Object.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -586,6 +589,12 @@
 		2971EE3A171DA55200F33AC8 /* objects.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = objects.plist; path = Resources/objects.plist; sourceTree = "<group>"; };
 		2971EE3B171DA55200F33AC8 /* objects.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; name = objects.pvr.ccz; path = Resources/objects.pvr.ccz; sourceTree = "<group>"; };
 		2971EE3C171DA55200F33AC8 /* shapes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = shapes.plist; path = Resources/shapes.plist; sourceTree = "<group>"; };
+		2971EE49171DA78300F33AC8 /* Floor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Floor.h; sourceTree = "<group>"; };
+		2971EE4A171DA78300F33AC8 /* Floor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Floor.mm; sourceTree = "<group>"; };
+		2971EE4D171DA88000F33AC8 /* GameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLayer.h; sourceTree = "<group>"; };
+		2971EE4E171DA88000F33AC8 /* GameLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameLayer.mm; sourceTree = "<group>"; };
+		2971EE50171DAE2100F33AC8 /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
+		2971EE51171DAE2100F33AC8 /* Object.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Object.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -644,6 +653,7 @@
 		2971EBF7171DA40800F33AC8 /* RollinTiger */ = {
 			isa = PBXGroup;
 			children = (
+				2971EE4C171DA86900F33AC8 /* gameFiles */,
 				2971EE33171DA54500F33AC8 /* plist */,
 				2971EE18171DA43000F33AC8 /* GBox2D */,
 				2971EE02171DA40A00F33AC8 /* AppDelegate.h */,
@@ -1224,6 +1234,19 @@
 			name = plist;
 			sourceTree = "<group>";
 		};
+		2971EE4C171DA86900F33AC8 /* gameFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2971EE49171DA78300F33AC8 /* Floor.h */,
+				2971EE4A171DA78300F33AC8 /* Floor.mm */,
+				2971EE4D171DA88000F33AC8 /* GameLayer.h */,
+				2971EE4E171DA88000F33AC8 /* GameLayer.mm */,
+				2971EE50171DAE2100F33AC8 /* Object.h */,
+				2971EE51171DAE2100F33AC8 /* Object.mm */,
+			);
+			name = gameFiles;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1465,6 +1488,9 @@
 				2971EE2F171DA43000F33AC8 /* GB2ShapeCache.mm in Sources */,
 				2971EE30171DA43000F33AC8 /* GB2Sprite.mm in Sources */,
 				2971EE31171DA43000F33AC8 /* GB2WorldContactListener.mm in Sources */,
+				2971EE4B171DA78300F33AC8 /* Floor.mm in Sources */,
+				2971EE4F171DA88000F33AC8 /* GameLayer.mm in Sources */,
+				2971EE52171DAE2100F33AC8 /* Object.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
