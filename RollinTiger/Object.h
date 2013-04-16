@@ -20,3 +20,21 @@
 +(Object*) randomObject;
 
 @end
+
+@interface ConsumableObject : Object
+{
+@protected
+    bool consumed;
+}
+-(void)consume;
+@end
+
+@interface Ball : ConsumableObject
+{
+}
+@end
+
+@interface Bomb : ConsumableObject
+{
+}
+@end

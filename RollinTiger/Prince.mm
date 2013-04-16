@@ -22,6 +22,8 @@
 
 @implementation Prince
 
+@synthesize ball, bomb;
+
 -(id) initWithGameLayer:(GameLayer*)gl
 {
     // 1 - Initialize the monkey
@@ -51,15 +53,10 @@
 
 -(void) updateCCFromPhysics
 {
-    // 1- Call the super class
+    // 1 - Call the super class
     [super updateCCFromPhysics];
     
-    // 2 - Apply the directional impulse
-    float impulse = clamp(-[self mass]*direction*WALK_FACTOR,
-                          -MAX_WALK_IMPULSE,
-                          MAX_WALK_IMPULSE);
-    [self applyLinearImpulse:-b2Vec2(impulse,0) point:[self worldCenter]];
-    
+    // 2 - Update animation phase
     animDelay -= 1.0f/60.0f;
     if(animDelay <= 0)
     {
@@ -71,20 +68,32 @@
         }
     }
     
-    // determine direction of the monkey
+    // 3 - Get the current velocity
+    b2Vec2 velocity = [self linearVelocity];
+    float vX = velocity.x;
+    
+    // 4 - Determine direction of the monkey
     bool isLeft = (direction < 0);
     
-    // direction as string
+    if((isLeft && (vX > -MAX_VX)) || ((!isLeft && (vX < MAX_VX))))
+    {
+        // apply the directional impulse
+        float impulse = clamp(-[self mass]*direction*WALK_FACTOR,
+                              -MAX_WALK_IMPULSE,
+                              MAX_WALK_IMPULSE);
+        [self applyLinearImpulse:-b2Vec2(impulse,0) point:[self worldCenter]];
+    }
+    
+    // 5 - Get direction as string
     NSString *dir = isLeft ? @"left" : @"right";
     
-    // update animation phase
+    // 6 - Update animation phase
     NSString *frameName;
     const float standingLimit = 0.1;
-    float vX = [self linearVelocity].x;
     if((vX > -standingLimit) && (vX < standingLimit))
     {
         // standing
-        frameName = [NSString stringWithFormat:@"prince/left_2.png"];
+        frameName = [NSString stringWithFormat:@"prince/left_1.png"];
     }
     else
     {
@@ -93,8 +102,15 @@
         frameName = [NSString stringWithFormat:@"prince/%@_%d.png", dir, animPhase];
     }
     
-    // set the display frame
+    // 7 - Set the display frame
     [self setDisplayFrameNamed:frameName];
 }
 
+
+-(void) ballCount{
+    ball = ball +1;
+}
+-(void) bombCount{
+    bomb = bomb +1;
+}
 @end
