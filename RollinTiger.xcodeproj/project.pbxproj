@@ -188,6 +188,15 @@
 		2971EE2F171DA43000F33AC8 /* GB2ShapeCache.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2971EE23171DA43000F33AC8 /* GB2ShapeCache.mm */; };
 		2971EE30171DA43000F33AC8 /* GB2Sprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2971EE25171DA43000F33AC8 /* GB2Sprite.mm */; };
 		2971EE31171DA43000F33AC8 /* GB2WorldContactListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2971EE27171DA43000F33AC8 /* GB2WorldContactListener.mm */; };
+		2971EE3D171DA55200F33AC8 /* background-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2971EE34171DA55200F33AC8 /* background-hd.plist */; };
+		2971EE3E171DA55200F33AC8 /* background-hd.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 2971EE35171DA55200F33AC8 /* background-hd.pvr.ccz */; };
+		2971EE3F171DA55200F33AC8 /* background.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2971EE36171DA55200F33AC8 /* background.plist */; };
+		2971EE40171DA55200F33AC8 /* background.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 2971EE37171DA55200F33AC8 /* background.pvr.ccz */; };
+		2971EE41171DA55200F33AC8 /* objects-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2971EE38171DA55200F33AC8 /* objects-hd.plist */; };
+		2971EE42171DA55200F33AC8 /* objects-hd.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 2971EE39171DA55200F33AC8 /* objects-hd.pvr.ccz */; };
+		2971EE43171DA55200F33AC8 /* objects.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2971EE3A171DA55200F33AC8 /* objects.plist */; };
+		2971EE44171DA55200F33AC8 /* objects.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 2971EE3B171DA55200F33AC8 /* objects.pvr.ccz */; };
+		2971EE45171DA55200F33AC8 /* shapes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2971EE3C171DA55200F33AC8 /* shapes.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -568,6 +577,15 @@
 		2971EE26171DA43000F33AC8 /* GB2WorldContactListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GB2WorldContactListener.h; sourceTree = "<group>"; };
 		2971EE27171DA43000F33AC8 /* GB2WorldContactListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GB2WorldContactListener.mm; sourceTree = "<group>"; };
 		2971EE2A171DA43000F33AC8 /* GMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMath.h; sourceTree = "<group>"; };
+		2971EE34171DA55200F33AC8 /* background-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "background-hd.plist"; path = "Resources/background-hd.plist"; sourceTree = "<group>"; };
+		2971EE35171DA55200F33AC8 /* background-hd.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; name = "background-hd.pvr.ccz"; path = "Resources/background-hd.pvr.ccz"; sourceTree = "<group>"; };
+		2971EE36171DA55200F33AC8 /* background.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = background.plist; path = Resources/background.plist; sourceTree = "<group>"; };
+		2971EE37171DA55200F33AC8 /* background.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; name = background.pvr.ccz; path = Resources/background.pvr.ccz; sourceTree = "<group>"; };
+		2971EE38171DA55200F33AC8 /* objects-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "objects-hd.plist"; path = "Resources/objects-hd.plist"; sourceTree = "<group>"; };
+		2971EE39171DA55200F33AC8 /* objects-hd.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; name = "objects-hd.pvr.ccz"; path = "Resources/objects-hd.pvr.ccz"; sourceTree = "<group>"; };
+		2971EE3A171DA55200F33AC8 /* objects.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = objects.plist; path = Resources/objects.plist; sourceTree = "<group>"; };
+		2971EE3B171DA55200F33AC8 /* objects.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; name = objects.pvr.ccz; path = Resources/objects.pvr.ccz; sourceTree = "<group>"; };
+		2971EE3C171DA55200F33AC8 /* shapes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = shapes.plist; path = Resources/shapes.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -626,6 +644,7 @@
 		2971EBF7171DA40800F33AC8 /* RollinTiger */ = {
 			isa = PBXGroup;
 			children = (
+				2971EE33171DA54500F33AC8 /* plist */,
 				2971EE18171DA43000F33AC8 /* GBox2D */,
 				2971EE02171DA40A00F33AC8 /* AppDelegate.h */,
 				2971EE03171DA40A00F33AC8 /* AppDelegate.mm */,
@@ -1189,6 +1208,22 @@
 			path = GBox2D;
 			sourceTree = "<group>";
 		};
+		2971EE33171DA54500F33AC8 /* plist */ = {
+			isa = PBXGroup;
+			children = (
+				2971EE34171DA55200F33AC8 /* background-hd.plist */,
+				2971EE35171DA55200F33AC8 /* background-hd.pvr.ccz */,
+				2971EE36171DA55200F33AC8 /* background.plist */,
+				2971EE37171DA55200F33AC8 /* background.pvr.ccz */,
+				2971EE38171DA55200F33AC8 /* objects-hd.plist */,
+				2971EE39171DA55200F33AC8 /* objects-hd.pvr.ccz */,
+				2971EE3A171DA55200F33AC8 /* objects.plist */,
+				2971EE3B171DA55200F33AC8 /* objects.pvr.ccz */,
+				2971EE3C171DA55200F33AC8 /* shapes.plist */,
+			);
+			name = plist;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1253,6 +1288,15 @@
 				2971EC11171DA40800F33AC8 /* iTunesArtwork in Resources */,
 				2971ED4F171DA40A00F33AC8 /* ChangeLog in Resources */,
 				2971EE12171DA40B00F33AC8 /* blocks.png in Resources */,
+				2971EE3D171DA55200F33AC8 /* background-hd.plist in Resources */,
+				2971EE3E171DA55200F33AC8 /* background-hd.pvr.ccz in Resources */,
+				2971EE3F171DA55200F33AC8 /* background.plist in Resources */,
+				2971EE40171DA55200F33AC8 /* background.pvr.ccz in Resources */,
+				2971EE41171DA55200F33AC8 /* objects-hd.plist in Resources */,
+				2971EE42171DA55200F33AC8 /* objects-hd.pvr.ccz in Resources */,
+				2971EE43171DA55200F33AC8 /* objects.plist in Resources */,
+				2971EE44171DA55200F33AC8 /* objects.pvr.ccz in Resources */,
+				2971EE45171DA55200F33AC8 /* shapes.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
