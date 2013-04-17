@@ -35,7 +35,7 @@
 +(Object*) randomObject
 {
     NSString *objName;
-    switch(rand() % 3)
+    switch(rand() % 2)
     {
         case 0:
             return [[[Ball alloc]initWithObject:@"basketball"]autorelease];
@@ -74,8 +74,8 @@
     [self runAction:
      [CCSequence actions:
       [CCSpawn actions:
-       [CCFadeOut actionWithDuration:0.1],
-       [CCScaleTo actionWithDuration:0.2 scale:0.0],
+       [CCFadeOut actionWithDuration:0],
+       [CCScaleTo actionWithDuration:0 scale:0.0],
        nil],
       [CCCallFunc actionWithTarget:self selector:@selector(deleteNow)],
       nil]

@@ -16,9 +16,9 @@
 
 #define JUMP_IMPULSE 6.0f
 #define WALK_FACTOR 3.0f
-#define MAX_WALK_IMPULSE 0.2f
+#define MAX_WALK_IMPULSE 2.2f
 #define ANIM_SPEED 0.3f
-#define MAX_VX 2.0f
+#define MAX_VX 3.0f
 
 @implementation Prince
 
@@ -26,16 +26,16 @@
 
 -(id) initWithGameLayer:(GameLayer*)gl
 {
-    // 1 - Initialize the monkey
+    // 1 - Initialize the prince
     self = [super initWithDynamicBody:@"right_1"
                       spriteFrameName:@"prince/right_1.png"];
     
     if(self)
     {
-        // 2 - Do not let the monkey rotate
+        // 2 - Do not let the prince rotate
         [self setFixedRotation:true];
         
-        // 3 - The monkey uses continuous collision detection
+        // 3 - The prince uses continuous collision detection
         // to avoid getting stuck inside fast-falling objects
         [self setBullet:YES];
         
@@ -72,7 +72,7 @@
     b2Vec2 velocity = [self linearVelocity];
     float vX = velocity.x;
     
-    // 4 - Determine direction of the monkey
+    // 4 - Determine direction of the prince
     bool isLeft = (direction < 0);
     
     if((isLeft && (vX > -MAX_VX)) || ((!isLeft && (vX < MAX_VX))))
@@ -109,8 +109,11 @@
 
 -(void) ballCount{
     ball = ball +1;
+    NSLog(@"ball count: %d", self.ball);
 }
 -(void) bombCount{
     bomb = bomb +1;
+    NSLog(@"bomb count: %d", self.bomb);
+
 }
 @end

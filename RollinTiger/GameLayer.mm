@@ -15,6 +15,7 @@
 #import "GMath.h"
 #import "SimpleAudioEngine.h"
 #import "Prince.h"
+#import "Hud.h"
 
 // HelloWorldLayer implementation
 @implementation GameLayer
@@ -90,6 +91,10 @@
         
         //enabling movement
         self.isAccelerometerEnabled = YES;
+        
+        // add hud
+        hud = [[[Hud alloc] init] autorelease];
+        [self addChild:hud z:10000];
     }
     
 	return self;
@@ -97,38 +102,52 @@
 
 -(void) update: (ccTime) dt
 {
+
+    for (int i=1; i<7; i++) {
+        
     // drop next item
-    nextDrop -= dt;
+    nextDrop -= dt*0.1*i;
     if(nextDrop <= 0)
     {
         if(nextObject)
         {
             // let the object drop
             [nextObject setActive:YES];
-            
+            [nextObject2 setActive:YES];
+
             // set next drop time
             nextDrop = dropDelay;
             
             // reduce delay to the drop after this
             // this will increase game&#039;s difficulty
-            dropDelay *= 0.98f;
             
         }
         
         // create new random object
         nextObject = [Object randomObject];
+        nextObject2 = [Object randomObject];
+
         
         // but keep it disabled
         [nextObject setActive:NO];
+        [nextObject2 setActive:NO];
+
         
         // set position
         float xPos = gFloatRand(40,300);
+        float xPos2 = gFloatRand(40,300);
         float yPos = 500;
         [nextObject setPhysicsPosition:b2Vec2FromCC(xPos, yPos)];
-        
+        [nextObject2 setPhysicsPosition:b2Vec2FromCC(xPos2, yPos)];
+
         // add it to our object layer
         [objectLayer addChild:[nextObject ccNode]];
+        [objectLayer addChild:[nextObject2 ccNode]];
+
     }
+    }
+    [hud setScore:prince.ball];
+
 }
 
 - (void)accelerometer:(UIAccelerometer*)accelerometer

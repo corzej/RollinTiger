@@ -158,6 +158,7 @@
         <key>fileList</key>
         <array>
             <filename>Objects</filename>
+            <filename>Objects/numbers</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

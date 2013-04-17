@@ -9,6 +9,7 @@
 #import "cocos2d.h"
 @class Object;
 @class Prince;
+@class Hud;
 
 
 // GameLayer
@@ -22,8 +23,13 @@
     ccTime dropDelay;                       //!< delay between drops
     
     Object *nextObject;                     //!< weak reference
+    Object *nextObject2;                     //!< weak reference
+    Object *nextObject3;                     //!< weak reference
+    Object *nextObject4;                     //!< weak reference
     
     Prince *prince;
+    Hud *hud;                               //!< weak reference
+
 }
 
 // returns a CCScene that contains the GameLayer as the only child

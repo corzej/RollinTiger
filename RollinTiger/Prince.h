@@ -12,7 +12,7 @@
 @class GameLayer;
 
 @interface Prince : GB2Sprite{
-    float direction;      // keeps monkey's direction (from accelerometer)
+    float direction;      // keeps prince's direction (from accelerometer)
     int animPhase;        // the current animation phase
     ccTime animDelay;     // delay until the next animation phase is stated
     GameLayer *gameLayer; // weak reference}
@@ -21,14 +21,11 @@
     int bomb;         //number of bomb prince collected
 }
 
-@property (readonly) int ball;
-@property (readonly) int bomb;
+@property (readonly) int ball;		//count the ball that prince get
+@property (readonly) int bomb;		//count the bomb that prince get
 
 -(id) initWithGameLayer:(GameLayer*)gl;
 -(void) walk:(float)direction;
-
-
-
 
 -(void)ballCount;
 -(void)bombCount;

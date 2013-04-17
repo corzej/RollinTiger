@@ -10,7 +10,7 @@
             <key>format</key>
             <integer>1</integer>
             <key>ptm_ratio</key>
-            <real>170</real>
+            <real>60.7</real>
         </dict>
         <key>bodies</key>
 		<dict>
@@ -18,7 +18,7 @@
 			<key>grassfront</key>
 			<dict>
 				<key>anchorpoint</key>
-                <string>{ 0.0021,0.0315 }</string>
+                <string>{ 0.2490,0.1315 }</string>
 				<key>fixtures</key>
 				<array>
 
@@ -36,10 +36,10 @@
 						<key>polygons</key>
 						<array>
 							<array>	
-								<string>{ -3.060,30.270 }</string>	
-								<string>{ -0.060,-4.730 }</string>	
-								<string>{ 958.940,-3.730 }</string>	
-								<string>{ 958.940,28.270 }</string>
+								<string>{ -240.060,15.270 }</string>	
+								<string>{ -237.060,-19.730 }</string>	
+								<string>{ 721.940,-18.730 }</string>	
+								<string>{ 721.940,13.270 }</string>
 							</array>
 						</array>
                     </dict>
@@ -53,7 +53,7 @@
 				<array>
 
 					<dict>
-                        <key>density</key> <real>4.9</real>
+                        <key>density</key> <real>40</real>
                         <key>friction</key> <real>0.5</real>
                         <key>restitution</key> <real>0.1</real>
                         <key>filter_categoryBits</key> <integer>1</integer>
@@ -92,7 +92,7 @@
 				<array>
 
 					<dict>
-                        <key>density</key> <real>7</real>
+                        <key>density</key> <real>0.1</real>
                         <key>friction</key> <real>0.6</real>
                         <key>restitution</key> <real>0.1</real>
                         <key>filter_categoryBits</key> <integer>1</integer>
@@ -144,7 +144,7 @@
 
 					<dict>
                         <key>density</key> <real>2</real>
-                        <key>friction</key> <real>0</real>
+                        <key>friction</key> <real>1</real>
                         <key>restitution</key> <real>0</real>
                         <key>filter_categoryBits</key> <integer>2</integer>
                         <key>filter_groupIndex</key> <integer>0</integer>
