@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		292FD2AC1729736E00CDF062 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 292FD2AA1729736E00CDF062 /* icon.png */; };
-		292FD2AD1729736E00CDF062 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 292FD2AB1729736E00CDF062 /* icon@2x.png */; };
+		292FD2AD1729736E00CDF062 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 292FD2AB1729736E00CDF062 /* Icon@2x.png */; };
 		292FD2B1172975D800CDF062 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 292FD2AE172975D800CDF062 /* Default.png */; };
 		292FD2B2172975D800CDF062 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 292FD2AF172975D800CDF062 /* Default-568h@2x.png */; };
 		292FD2B3172975D800CDF062 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 292FD2B0172975D800CDF062 /* Default@2x.png */; };
@@ -18,6 +17,7 @@
 		292FD2BD1729816B00CDF062 /* ending_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 292FD2BC1729816B00CDF062 /* ending_1.png */; };
 		292FD2BF172984BC00CDF062 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 292FD2BE172984BC00CDF062 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		292FD2C2172986C000CDF062 /* iAdSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 292FD2C1172986C000CDF062 /* iAdSingleton.m */; };
+		296F42D81730291E0074ED76 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 296F42D71730291E0074ED76 /* Icon.png */; };
 		2971EBE6171DA40800F33AC8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2971EBE5171DA40800F33AC8 /* QuartzCore.framework */; };
 		2971EBE8171DA40800F33AC8 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2971EBE7171DA40800F33AC8 /* OpenGLES.framework */; };
 		2971EBEA171DA40800F33AC8 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2971EBE9171DA40800F33AC8 /* OpenAL.framework */; };
@@ -219,8 +219,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		292FD2AA1729736E00CDF062 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		292FD2AB1729736E00CDF062 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		292FD2AB1729736E00CDF062 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		292FD2AE172975D800CDF062 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		292FD2AF172975D800CDF062 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		292FD2B0172975D800CDF062 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -231,6 +230,7 @@
 		292FD2BE172984BC00CDF062 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		292FD2C0172986BF00CDF062 /* iAdSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iAdSingleton.h; sourceTree = "<group>"; };
 		292FD2C1172986C000CDF062 /* iAdSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iAdSingleton.m; sourceTree = "<group>"; };
+		296F42D71730291E0074ED76 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		2971EBE2171DA40800F33AC8 /* RollinTiger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RollinTiger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2971EBE5171DA40800F33AC8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2971EBE7171DA40800F33AC8 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -717,6 +717,7 @@
 		2971EBF8171DA40800F33AC8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				296F42D71730291E0074ED76 /* Icon.png */,
 				29F5FD92172F6A7500A2BAE3 /* instructions.png */,
 				29F5FD8E172F680C00A2BAE3 /* Ending2.png */,
 				29F5FD8F172F680C00A2BAE3 /* Ending1.png */,
@@ -730,8 +731,7 @@
 				2971EBFF171DA40800F33AC8 /* fps_images-hd.png */,
 				2971EC01171DA40800F33AC8 /* fps_images-ipadhd.png */,
 				2971EC03171DA40800F33AC8 /* Icon-72.png */,
-				292FD2AA1729736E00CDF062 /* icon.png */,
-				292FD2AB1729736E00CDF062 /* icon@2x.png */,
+				292FD2AB1729736E00CDF062 /* Icon@2x.png */,
 				2971EC05171DA40800F33AC8 /* Icon-Small-50.png */,
 				2971EC07171DA40800F33AC8 /* Icon-Small.png */,
 				2971EC09171DA40800F33AC8 /* Icon-Small@2x.png */,
@@ -1387,8 +1387,7 @@
 				2971EE43171DA55200F33AC8 /* objects.plist in Resources */,
 				2971EE44171DA55200F33AC8 /* objects.pvr.ccz in Resources */,
 				2971EE45171DA55200F33AC8 /* shapes.plist in Resources */,
-				292FD2AC1729736E00CDF062 /* icon.png in Resources */,
-				292FD2AD1729736E00CDF062 /* icon@2x.png in Resources */,
+				292FD2AD1729736E00CDF062 /* Icon@2x.png in Resources */,
 				292FD2B1172975D800CDF062 /* Default.png in Resources */,
 				292FD2B2172975D800CDF062 /* Default-568h@2x.png in Resources */,
 				292FD2B3172975D800CDF062 /* Default@2x.png in Resources */,
@@ -1399,6 +1398,7 @@
 				29F5FD90172F680C00A2BAE3 /* Ending2.png in Resources */,
 				29F5FD91172F680C00A2BAE3 /* Ending1.png in Resources */,
 				29F5FD93172F6A7500A2BAE3 /* instructions.png in Resources */,
+				296F42D81730291E0074ED76 /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1627,12 +1627,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = RollinTiger/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"RollinTiger/libs/kazmath/include\"";
 				INFOPLIST_FILE = RollinTiger/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
@@ -1640,6 +1642,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "\"RollinTiger/libs\"";
+				VALID_ARCHS = "armv7 armv6";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1648,11 +1651,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = RollinTiger/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"RollinTiger/libs/kazmath/include\"";
 				INFOPLIST_FILE = RollinTiger/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
@@ -1661,6 +1666,7 @@
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "\"RollinTiger/libs\"";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv6";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
