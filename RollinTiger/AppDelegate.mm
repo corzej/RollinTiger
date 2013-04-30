@@ -7,7 +7,7 @@
 //
 
 #import "cocos2d.h"
-
+#import "iAdSingleton.h"
 #import "AppDelegate.h"
 #import "IntroLayer.h"
 
@@ -20,7 +20,7 @@
 	// Create the main window
 	window_ = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	
-	
+    
 	// Create an CCGLView with a RGB565 color buffer, and a depth buffer of 0-bits
 	CCGLView *glView = [CCGLView viewWithFrame:[window_ bounds]
 								   pixelFormat:kEAGLColorFormatRGB565	//kEAGLColorFormatRGBA8
@@ -90,6 +90,17 @@
 	// make main window visible
 	[window_ makeKeyAndVisible];
 	
+    
+    
+    
+//iad
+    //set the Navigation Controller as the root view controller
+    [window_ setRootViewController:navController_];
+    // make main window visible
+    [window_ makeKeyAndVisible];
+    [[iAdSingleton sharedInstance]createAdView]; //to call the create view method
+    [navController_.view addSubview:[[iAdSingleton sharedInstance] bannerView]];
+    
 	return YES;
 }
 

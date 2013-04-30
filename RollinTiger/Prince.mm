@@ -20,9 +20,15 @@
 #define ANIM_SPEED 0.3f
 #define MAX_VX 3.0f
 
+@interface Prince()
+
+@property(readwrite) int ball;
+
+@end
+
 @implementation Prince
 
-@synthesize ball, bomb;
+@synthesize ball=_ball, bomb;
 
 -(id) initWithGameLayer:(GameLayer*)gl
 {
@@ -41,6 +47,7 @@
         
         // 4 - Store the game layer
         gameLayer = gl;
+        self.ball =100;
     }
     
     return self;
@@ -85,7 +92,7 @@
     }
     
     // 5 - Get direction as string
-    NSString *dir = isLeft ? @"left" : @"right";
+    NSString *dir = isLeft ? @"right" : @"left";
     
     // 6 - Update animation phase
     NSString *frameName;
@@ -108,12 +115,14 @@
 
 
 -(void) ballCount{
-    ball = ball +1;
+    self.ball = self.ball +1;
     NSLog(@"ball count: %d", self.ball);
 }
 -(void) bombCount{
-    bomb = bomb +1;
-    NSLog(@"bomb count: %d", self.bomb);
+    self.ball = self.ball-1;
 
+}
+-(bool)isDead{
+    return self.ball>=150;
 }
 @end

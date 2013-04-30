@@ -18,6 +18,7 @@
     
     if(self)
     {
+        CGSize size = [[CCDirector sharedDirector] winSize];
 
         
         // cache sprite frames for the digits
@@ -32,9 +33,10 @@
         for(int i=0; i<MAX_DIGITS; i++)
         {
             digits[i] = [CCSprite spriteWithSpriteFrame:digitFrame[0]];
-            digits[i].position = ccp(200+i*25, 460);
+            digits[i].position = ccp(200+i*25, size.height-70);
             [self addChild:digits[i]];
         }
+
     }
     
     return self;

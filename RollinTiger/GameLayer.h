@@ -29,9 +29,17 @@
     
     Prince *prince;
     Hud *hud;                               //!< weak reference
+    
+    ccTime gameOverTimer;                   //!< timer for restart of the level
+
+    //timer
+    CCLabelTTF *timeLabel;
+    double startTime;
 
 }
 
 // returns a CCScene that contains the GameLayer as the only child
 +(CCScene *) scene;
+//timer
+-(void)displaySecs:(double)secs;
 @end

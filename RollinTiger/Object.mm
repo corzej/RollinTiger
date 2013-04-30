@@ -135,6 +135,7 @@
     {
         Prince *prince = (Prince *)contact.otherObject;
         [prince ballCount];
+        
         [self consume];
     }
 }

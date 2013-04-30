@@ -16,9 +16,6 @@
     int animPhase;        // the current animation phase
     ccTime animDelay;     // delay until the next animation phase is stated
     GameLayer *gameLayer; // weak reference}
-    
-    int ball;         //number of ball prince collected
-    int bomb;         //number of bomb prince collected
 }
 
 @property (readonly) int ball;		//count the ball that prince get
@@ -29,6 +26,6 @@
 
 -(void)ballCount;
 -(void)bombCount;
-
+-(bool)isDead;
 
 @end

@@ -17,6 +17,8 @@
 {
     CCSprite *digits[MAX_DIGITS];  // weak references
     CCSpriteFrame *digitFrame[10]; // weak references
+    
+
 }
 
 -(id) init;
@@ -26,5 +28,7 @@
  * @param score the score to display
  */
 -(void) setScore:(float) score;
+
+
 
 @end

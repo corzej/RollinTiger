@@ -16,6 +16,10 @@
 #import "SimpleAudioEngine.h"
 #import "Prince.h"
 #import "Hud.h"
+#import "MenuLayer.h"
+#import "EndingLayer1.h"
+#import "EndingLayer2.h"
+
 
 // HelloWorldLayer implementation
 @implementation GameLayer
@@ -77,7 +81,7 @@
         GB2Node *rightWall = [[GB2Node alloc] initWithStaticBody:nil node:nil];
         [rightWall addEdgeFrom:b2Vec2FromCC(320, 0) to:b2Vec2FromCC(320, 10000)];
         
-        nextDrop = 3.0f;  // drop first object after 3s
+        nextDrop = 1.5f;  // drop first object after 3s
         dropDelay = 1.0f; // drop next object after 1s
         
         [SimpleAudioEngine sharedEngine];
@@ -95,6 +99,16 @@
         // add hud
         hud = [[[Hud alloc] init] autorelease];
         [self addChild:hud z:10000];
+        
+        CGSize size = [[CCDirector sharedDirector] winSize];
+ 
+        //timer
+        timeLabel =[CCLabelTTF labelWithString:@"" fontName:@"AmericanTypewriter-Bold" fontSize:40.0];
+        timeLabel.anchorPoint =ccp(1,1);
+        timeLabel.position= ccp(80 ,size.height-50);
+        [self addChild:timeLabel];
+        
+        startTime =CACurrentMediaTime();
     }
     
 	return self;
@@ -102,11 +116,40 @@
 
 -(void) update: (ccTime) dt
 {
+    //timer
+    static double MAX_TIME =60;
+    double timeSoFar =CACurrentMediaTime() -startTime;
+    double remainingTime = MAX_TIME - timeSoFar;
+    [self displaySecs:remainingTime];
+    
+    if(remainingTime<=0){
+        [[GB2Engine sharedInstance] deleteAllObjects];
+        [[CCDirector sharedDirector]replaceScene:[EndingLayer1 scene]];
+        return;
+    }
+    
+    // check for monkey's death
+    
+    
+    
+    if(prince.isDead)
+    {
 
-    for (int i=1; i<7; i++) {
+            [[GB2Engine sharedInstance] deleteAllObjects];
+            
+            // restart the level
+            [[CCDirector sharedDirector] replaceScene:[EndingLayer2 scene]];
+            return;
+        
+    }
+
+    
+    CGSize size = [[CCDirector sharedDirector] winSize];
+
+    for (int i=1; i<4; i++) {
         
     // drop next item
-    nextDrop -= dt*0.1*i;
+    nextDrop -= dt*0.3*i;
     if(nextDrop <= 0)
     {
         if(nextObject)
@@ -135,8 +178,8 @@
         
         // set position
         float xPos = gFloatRand(40,300);
-        float xPos2 = gFloatRand(40,300);
-        float yPos = 500;
+        float xPos2 = gFloatRand(10,330);
+        float yPos = size.height +40;
         [nextObject setPhysicsPosition:b2Vec2FromCC(xPos, yPos)];
         [nextObject2 setPhysicsPosition:b2Vec2FromCC(xPos2, yPos)];
 
@@ -147,6 +190,8 @@
     }
     }
     [hud setScore:prince.ball];
+    
+
 
 }
 
@@ -156,5 +201,15 @@
     // forward accelerometer value to monkey
     [prince walk:acceleration.x];
 }
-
-@end
+//timer
+-(void)displaySecs:(double)secs{
+    secs =MAX(0, secs);
+    
+    double intPart =0;
+    double fractPart = modf(secs, &intPart);
+    int isecs = (int)intPart;
+    int sec = isecs % 60;
+    
+    
+    [timeLabel setString:[NSString stringWithFormat:@" %02d ",sec]];
+}@end
